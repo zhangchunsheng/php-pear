@@ -21,6 +21,10 @@ class Ftp {
         $this->conn = ftp_connect($ftpServer);
     }
 
+    public function __destruct($ftpServer) {
+        $this->close();
+    }
+
     public function __call($func, $arg) {
         if(strstr($func, 'ftp_') !== false && function_exists($func)) {
             array_unshift($arg, $this->conn);
