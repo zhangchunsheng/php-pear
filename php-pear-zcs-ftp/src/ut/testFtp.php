@@ -12,10 +12,10 @@
 
 require(__DIR__ . '/../LL/Ftp.php');
 
-$ftp = new \LL\Ftp('ftp.shuzilm.cn');
-$ftp->login('yongche', '@#$%tgbERDF');
+$ftp = new \LL\Ftp('');
+$ftp->login('', '');
 
 $remoteFiles = $ftp->dir('installations');
 
-//shuzilm
-$ftp->getTexts(__DIR__ . '/../shuzilm', $remoteFiles);
+//data
+$ftp->getTexts(__DIR__ . '/../data', $remoteFiles);
