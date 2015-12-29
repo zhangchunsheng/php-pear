@@ -21,7 +21,7 @@ class Ftp {
         $this->conn = ftp_connect($ftpServer);
     }
 
-    public function __destruct($ftpServer) {
+    public function __destruct() {
         $this->close();
     }
 
